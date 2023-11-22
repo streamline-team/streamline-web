@@ -7,10 +7,10 @@ import {KindeProvider} from "@kinde-oss/kinde-auth-react";
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <KindeProvider
-      clientId="e4f2eb91e927409193df3165d6616a46"
-      domain="https://streamline-staging.eu.kinde.com"
-      redirectUri="http://localhost:3030"
-      logoutUri="http://localhost:3030"
+      clientId={import.meta.env.VITE_KINDE_CLIENT_ID}
+      domain={import.meta.env.VITE_KINDE_DOMAIN || ''}
+      redirectUri={import.meta.env.VITE_KINDE_REDIRECT_URI || ''}
+      logoutUri={import.meta.env.VITE_KINDE_LOGOUT_URI}
     >
       <App />
     </KindeProvider>
