@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
-import ExampleComponent from './components/example'
+import Todocomp from './components/toDoComponent';
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const { login, isAuthenticated, isLoading, user } = useKindeAuth()
 
   useEffect(() => {
@@ -30,10 +28,7 @@ function App() {
 
   return (
     <>
-      <ExampleComponent></ExampleComponent>
-      <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <Todocomp/>
     </>
   )
 }
