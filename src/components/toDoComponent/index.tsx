@@ -1,5 +1,6 @@
 import { Search, BarChart, Sliders, X } from "react-feather";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import  ToDoTask from "../toDoTask/index.tsx";
 
 const toDoComp = (): JSX.Element => {
   const [priority, setPriority] = useState<number>();
@@ -25,7 +26,7 @@ const toDoComp = (): JSX.Element => {
 
   const [showTagsDropdown, setShowTagsDropdown] = useState(false);
 
-  const toggleDropdown = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
 
@@ -61,14 +62,10 @@ const toDoComp = (): JSX.Element => {
     }
   };
 
-  
- 
-
-  
-
   return (
-  <div className="items-center justify-center h-screen align-middle w-screen-xl">
-    <div className="relative flex">
+    <div className="items-center justify-center h-screen align-middle w-screen-xl">
+      <div>
+      <div className="relative flex">
         <input
           className="w-full h-12 pl-12 pr-4 align-middle shadow-lg rounded-xl"
           placeholder="Search tasks..."
@@ -124,7 +121,10 @@ const toDoComp = (): JSX.Element => {
             Tags
           </button>
           {showTagsDropdown && (
-            <div className="absolute start-0 z-10 w-40 mt-2 bg-[#333333] rounded shadow-lg" style={ itemPosition ? {right: '-60px'} : {left: '-60px'} }>
+            <div
+              className="absolute start-0 z-10 w-40 mt-2 bg-[#333333] rounded shadow-lg"
+              style={itemPosition ? { right: "-60px" } : { left: "-60px" }}
+            >
               <div className="p-2">
                 <input
                   type="text"
@@ -139,7 +139,7 @@ const toDoComp = (): JSX.Element => {
                 >
                   Add Tag
                 </button>
-              </div >
+              </div>
               {availableTags.map((tag) => (
                 <div key={tag} className="flex items-center p-2">
                   <input
@@ -152,8 +152,7 @@ const toDoComp = (): JSX.Element => {
                   <X
                     className="ml-1 text-white cursor-pointer"
                     onClick={() => removeTag(tag)}
-                />
-
+                  />
                 </div>
               ))}
             </div>
@@ -176,6 +175,8 @@ const toDoComp = (): JSX.Element => {
           ))}
         </div>
       )}
+    </div>
+          < ToDoTask title="title" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ante ut elit pretium aliquam sit amet vel ligula. Fusce fringilla interdum nibh, pellentesque efficitur tellus dictum at. Nunc laoreet risus id vestibulum tempus. In tempus aliquam tempor. Maecenas egestas ligula et molestie feugiat. Morbi egestas augue volutpat, ultricies dui id, ornare sem. Donec in fringilla eros. Vestibulum pulvinar nunc eget ante maximus, ac vulputate metus elementum. Pellentesque accumsan, nunc suscipit sagittis egestas, mi tortor porta sapien, sed commodo neque nisl vel tortor." done={true} dueDate={new Date()} prority={1} tags={["tag1", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2", "tag2"]}/>
     </div>
   );
 };
