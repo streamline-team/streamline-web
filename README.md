@@ -25,6 +25,49 @@ The core functionality includes :
 - Deividas Dapkus  - Front End Development, % contribution
 
 # Tools Used
+Version Control
+- Git: Version control suystem for tracking changes in the codebase.
+- GitHub: Hosting the repository and managing codebase collaboration.
+
+Testing
+Jest: JavaScript testing framework for unit, integration, mock, smoke and integration testing.
+React testing library: Testing React components and their interactions.
+Selenium: For End-to-End Testing
+
+Test Code Coverage
+Jest Coverage: To measure and report code coverage during testing.
+
+Framework/Libraries
+React: JavaScript library for building user interaction.  
+Drizzle: Tool for simplifying the integration of blockchain functionality.
+TypeScript: Javascript addition of static typing language. 
+
+Authentification
+Kinde: Powerfull third party authenification tool that manages our users authentication seamlessly.
+
+Linters
+
+Project Management Tools
+
+Performance and Accessibility Audit
+Accessibility Testing: 
+
+Database
+PlanetScale: Database management system used for scalability and reliability.
+
+Deployment 
+
+CI/CD
+GitHub Actions: Setting up workflows for automated testing, building and deployment. 
+
+Other Tools/Services
+Tailwind CSS: libraries for styling and UI components
+Docker/Kubernetes: Containerisation and orchestration for deployment. 
+
+Documentation
+Markdown: Writing and formatting documentation, such as this README file.
+
+
 
 # How To Run The Application
 
