@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import "./App.css";
-import Todocomp from "./components/toDoComponent";
-import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
+import { useEffect } from 'react'
+import './App.css'
+import Todocomp from './components/toDoMain';
+import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
 
 function App() {
   const { login, isAuthenticated, isLoading, user } = useKindeAuth();
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Todocomp />
+      <Todocomp  />
     </>
   );
 }

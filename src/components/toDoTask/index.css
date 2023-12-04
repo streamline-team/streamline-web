@@ -1,0 +1,10 @@
+button[data-name="preview"],button[data-name="live"] {
+        display: none;
+    }
+
+
+.wmde-markdown {
+        all: unset;
+}
+
+  
