@@ -45,7 +45,7 @@ export const Tag: React.FC<{
   // Usage in your component
   return (
     <div
-      className={`flex items-center justify-center px-2 py-1 mb-2 mr-2 text-sm font-medium rounded-full`}
+      className={`flex items-center justify-center px-2 py-1 mb-2 mr-2 text-sm font-medium rounded-md`}
       style={{
         background: tag.background ? tag.background : "#000000",
         color: adjustColorContrast(tag.background!),
@@ -222,7 +222,7 @@ export const TagPicker: React.FC<{
         onChange={(e) => setColor(e.target.value)}
       />
       <button
-        className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded"
+        className="px-4 py-2 text-sm font-medium text-white bg-black rounded"
         onClick={handleAddTag}
       >
         Add Tag

@@ -9,7 +9,7 @@ export interface ToDoTaskProps {
   description: string;
   dueAt: string;
   priority: number;
-  tags?: any; 
+  tags?: any;
 }
 
 interface tagsProps {
@@ -57,7 +57,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
       description,
       dueAt: getCurrentDateTime("time", dueDate),
       priority,
-      tags: tagsids.length > 0 ? tagsids : undefined, 
+      tags: tagsids.length > 0 ? tagsids : undefined,
     };
 
     CreateTask({ body: newTask });
@@ -89,7 +89,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
   };
 
   const handleAddTag = (tag: tagsProps) => {
-    if (!tags.some(t => t.id === tag.id)) {
+    if (!tags.some((t) => t.id === tag.id)) {
       setTags([...tags, tag]);
       if (!allTags.some((t) => t.id === tag.id)) {
         editTags([...allTags, tag]);
@@ -98,7 +98,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
   };
 
   const handleRemoveTag = (tag: tagsProps) => {
-    setTags(tags.filter(t => t.id !== tag.id));
+    setTags(tags.filter((t) => t.id !== tag.id));
   };
 
   const handleMarkdownChange = (value?: string) => {
@@ -111,11 +111,13 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
 
   return (
     <div
-      className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
+    className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black bg-opacity-50"
+
       onClick={onClose}
     >
       <div
-        className="max-w-[1100px]  p-8 bg-[#252525] bg-opacity-100 rounded-lg"
+        className="p-4 sm:p-8 bg-[#252525] rounded-lg max-w-full sm:max-w-[1100px] w-full"
+
         onClick={(e) => e.stopPropagation()}
       >
         {/* Task Title Input */}
@@ -123,7 +125,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="text-2xl text-[#F7F7F7] w-full mb-4"
+          className="text-2xl text-[#F7F7F7] w-full mb-4 rounded-lg"
           placeholder="Task Title"
         />
         {/* Markdown Editor for Description */}
@@ -131,20 +133,21 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
           value={description}
           onChange={handleMarkdownChange}
           preview="edit"
+          className="rounded-lg"
         />
         {/* Due Date Input */}
         <input
           type="date"
           value={dueDate || getCurrentDateTime("date")}
           onChange={(e) => setDueDate(e.target.value)}
-          className="w-full mt-4"
+          className="w-full mt-4 appearance-none rounded-mg"
         />
         {/* Priority Input */}
         <input
           type="number"
           value={priority}
           onChange={(e) => setPriority(Number(e.target.value))}
-          className="w-full mt-4"
+          className="w-full mt-4 rounded-md"
           min={1}
           max={5}
         />
@@ -164,16 +167,16 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
         {/* Action Buttons */}
         <div className="flex justify-end mt-4">
           <button
-            onClick={handleSubmit}
-            className="px-4 py-2 mr-2 text-white bg-green-500 rounded"
-          >
-            Create Task
-          </button>
-          <button
             onClick={onClose}
-            className="px-4 py-2 text-white bg-red-500 rounded"
+            className="px-4 py-2 mr-2 text-white bg-red-500 rounded"
           >
             Cancel
+          </button>
+          <button
+            onClick={handleSubmit}
+            className="px-4 py-2 text-white bg-black rounded"
+          >
+            Create Task
           </button>
         </div>
       </div>

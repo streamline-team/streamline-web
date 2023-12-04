@@ -167,11 +167,12 @@ const editModal: React.FC<ModalProps> = ({
 
   return (
     <div
-      className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
+    className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black bg-opacity-50"
+
       onClick={handleBackgroundClick}
     >
       <div
-        className="p-8 bg-[#252525] rounded-lg max-w-[1100px] w-full"
+        className="p-4 sm:p-8 bg-[#252525] rounded-lg max-w-full sm:max-w-[1100px] w-full"
         onClick={handleModalContentClick}
       >
         <div className="flex items-center justify-between mb-8">
@@ -245,7 +246,7 @@ const editModal: React.FC<ModalProps> = ({
               onClose();
               setEditMode(false);
             }}
-            className="px-4 py-2 mt-2 text-[#F7F7F7] bg-black rounded"
+            className="px-4 py-2 mt-2 text-[#F7F7F7] bg-red-500 rounded"
           >
             Close
           </button>
