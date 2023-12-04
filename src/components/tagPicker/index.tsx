@@ -180,7 +180,7 @@ export const TagPicker: React.FC<{
           onClick={toggleDropdown}
         />
         <div ref={dropdownRef}>
-          {dropdownOpen && (
+          {dropdownOpen && currentTags.length > 0 && (
             <div className="absolute z-10 w-64 mt-2 overflow-y-auto bg-black border border-gray-200 rounded shadow-lg max-h-60">
               {currentTags.map((tag) => (
                 <label

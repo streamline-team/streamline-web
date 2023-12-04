@@ -390,7 +390,7 @@ const toDoComp = (): JSX.Element => {
       <div className="relative">
         <button
           onClick={() => setIsCreateModalOpen(true)}
-          className="fixed flex items-center justify-center w-40 h-12 text-black bg-white rounded-lg shadow-lg bottom-4 left-4"
+            className="fixed flex items-center justify-center h-12 text-black transform -translate-x-1/2 bg-white rounded-lg shadow-lg w-96 bottom-4 left-1/2"
         >
           Create New Task
           <ArrowUp className="w-4 h-4 ml-2" />
