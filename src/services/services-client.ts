@@ -32,7 +32,6 @@ export default async function ({
     options.body = JSON.stringify(body);
   }
 
-
   return fetch(
     `${import.meta.env.VITE_STREAMLINE_SERVICES_URL}/${endpoint}`,
     options
