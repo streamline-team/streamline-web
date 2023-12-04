@@ -172,11 +172,11 @@ const editModal: React.FC<ModalProps> = ({
       onClick={handleBackgroundClick}
     >
       <div
-        className="p-4 sm:p-8 bg-[#252525] rounded-lg max-w-full sm:max-w-[1100px] w-full"
+        className="p-4 sm:p-8 bg-[#252525] rounded-lg max-w-full sm:max-w-[1100px] w-full "
         onClick={handleModalContentClick}
       >
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex bg-[#333333] border border-[#434343] p-1 rounded-lg mr-2">
+        <div className="flex flex-wrap items-center justify-between mb-8 md:flex-nowrap">
+          <div className="flex bg-[#333333] border border-[#434343] p-1 rounded-lg mr-0 sm:mr-2 w-full sm:w-auto justify-center mb-2">
             <input
               type="checkbox"
               checked={updatedDone}
@@ -193,7 +193,7 @@ const editModal: React.FC<ModalProps> = ({
             ></input>
           </div>
 
-          <div className="flex bg-[#333333] border border-[#434343] p-1 rounded-lg">
+          <div className="flex bg-[#333333] border border-[#434343] p-1 rounded-lg w-full sm:w-auto justify-center">
             <input
               type="date"
               defaultValue={getCurrentDateTime("date", task.dueAt)}
