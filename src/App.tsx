@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import Todocomp from './components/toDoComponent';
+import Todocomp from './components/toDoMain';
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Todocomp/>
+      <Todocomp  />
     </>
   )
 }

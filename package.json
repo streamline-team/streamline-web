@@ -12,9 +12,14 @@
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-react": "^3.0.23",
+    "@testing-library/react": "^14.1.2",
+    "@uiw/react-md-editor": "^4.0.1",
+    "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "react-router-dom": "^6.20.1",
+    "use-local-storage-state": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.9.4",
