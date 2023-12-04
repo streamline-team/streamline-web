@@ -186,7 +186,7 @@ const editModal: React.FC<ModalProps> = ({
               }}
             />
             <input
-              className="text-2xl text-[#F7F7F7]"
+              className="text-2xl text-[#F7F7F7] pl-2"
               placeholder={task.title}
               value={updatedTitle}
               onChange={handleTitleChange}
