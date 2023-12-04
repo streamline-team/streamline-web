@@ -219,16 +219,16 @@ const toDoComp = (): JSX.Element => {
             <Search />
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-between mb-4 md:mb-0">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between w-full mb-4 md:mb-0">
+          <div className="flex flex-wrap items-center justify-between md:flex-nowrap">
             <input
               type="date"
-              className="flex px-4 py-2 my-2 mr-2 text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer border border-[#434343]"
+              className="flex px-4 py-2 my-2 mr-2 w-full text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer border border-[#434343]"
               onChange={(e) => setDate(e.target.value)}
             ></input>
             <div>
               <button
-                className="flex px-4 py-2 my-2 mr-2 w-44 text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer items-center justify-between border border-[#434343] "
+                className="flex px-4 py-2 my-2 mr-2 w-44  text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer items-center justify-between border border-[#434343] "
                 onClick={toggleDropdown}
               >
                 <BarChart className="mr-2" />
@@ -262,7 +262,7 @@ const toDoComp = (): JSX.Element => {
           </div>
           <div className="relative">
             <button
-              className="flex px-4 py-2 my-2 text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer border border-[#434343]"
+              className="flex px-4 py-2 my-2 text-white bg-[#333333] stroke-[#5D5D5D] rounded cursor-pointer border border-[#434343] w-full"
               onClick={toggleTagsDropdown}
             >
               <Sliders className="mr-2 rotate-90" />

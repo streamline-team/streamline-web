@@ -125,7 +125,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="text-2xl text-[#F7F7F7] w-full mb-4 rounded-lg"
+          className="text-2xl text-[#F7F7F7] w-full mb-4 rounded-lg pl-2"
           placeholder="Task Title"
         />
         {/* Markdown Editor for Description */}
@@ -140,14 +140,14 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
           type="date"
           value={dueDate || getCurrentDateTime("date")}
           onChange={(e) => setDueDate(e.target.value)}
-          className="w-full mt-4 appearance-none rounded-mg"
+          className="w-full pl-2 mt-4 appearance-none rounded-mg"
         />
         {/* Priority Input */}
         <input
           type="number"
           value={priority}
           onChange={(e) => setPriority(Number(e.target.value))}
-          className="w-full mt-4 rounded-md"
+          className="w-full pl-2 mt-4 rounded-md"
           min={1}
           max={5}
         />
