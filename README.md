@@ -181,6 +181,9 @@ The team project follows the Agile methodology, emphasising adaptability, collab
 
 ## Agile Practices
 
+<img width="619" alt="Copy of KanbanBoard" src="https://github.com/streamline-team/streamline-web/assets/92785142/04f4e370-e938-4f19-aec0-4a33abaf7aa9">
+
+
 ### Sprints
 - Time-boxed iterations (usually 1-4 weeks) for development and delivery of product increments.
 
@@ -275,9 +278,11 @@ This is mimicked for all folders and code functionality to ensure clear and well
 Jest Coverage: To measure and report code coverage during testing.
 The Streamlines entire application achieves ... % code coverage. 
 
-...% code coverage demonstrates that a significant portion of the codebase has been tested, confriming the applications stability. This minimises the likelihood of undiscovered bugs and ensures a more robust and trustworthy user experience.
+93% code coverage on the backend demonstrates that a significant portion of the codebase has been tested, confriming the applications stability. This minimises the likelihood of undiscovered bugs and ensures a more robust and trustworthy user experience.
 
+![Screenshot 2023-12-06 at 18 13 33](https://github.com/streamline-team/streamline-web/assets/92785142/49bb59e4-24b6-4701-9331-c78bfaaa6ab8)
 
+![Screenshot 2023-12-06 at 12 00 22](https://github.com/streamline-team/streamline-web/assets/92785142/21a88f8e-925f-4568-a1d2-8dcec44c8f69)
 
 ## 💻 Coding Practices
 
@@ -328,6 +333,9 @@ GitHub actions is used to automate the testing pipline whenever code is pushed. 
 Having defined workflows, version control integration and approval processes means there is standardisation in the CI Pipeline. The Pipeline can be broken into 3 components, the testnig stage, quality checks and deployment stage. Within the testing stage comprehensivve testing is executed on virtual environments. Quality checks ensure the code adheres to standards, security checks and dependecy vulnerabilities. Finally in the deployment stage automated deployment can occur to staging/production environments based on predefined conditions included the passing of tests and which branch the code is on.
 
 ![Screenshot 2023-12-06 at 12 01 16](https://github.com/streamline-team/streamline-web/assets/92785142/d964ca45-a041-4705-bed3-b49a8abdaa61)
+
+![Screenshot 2023-12-06 at 19 45 29](https://github.com/streamline-team/streamline-web/assets/92785142/7900b18d-d0e8-4340-b564-1a2ec472ad84)
+
 
 
 ## ❗ Standards
