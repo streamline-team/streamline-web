@@ -47,6 +47,14 @@ jobs:
       with:
         python-version: '3.12' 
 
+    - name: Create .env file
+      run: |
+        echo "VITE_KINDE_CLIENT_ID=${{ vars.VITE_KINDE_CLIENT_ID }}" >> .env
+        echo "VITE_KINDE_DOMAIN=${{ vars.VITE_KINDE_DOMAIN }}" >> .env
+        echo "VITE_KINDE_LOGOUT_URI=${{ vars.VITE_KINDE_LOGOUT_URI }}" >> .env
+        echo "VITE_KINDE_REDIRECT_URI=${{ vars.VITE_KINDE_REDIRECT_URI }}" >> .env
+        echo "VITE_STREAMLINE_SERVICES_URL=${{ vars.VITE_STREAMLINE_SERVICES_URL }}" >> .env
+
     - name: Remove previous chrome instances
       run: sudo apt purge google-chrome-stable
 
@@ -61,3 +69,17 @@ jobs:
          npm run dev &
          npm run test:e2e
       shell: bash
+
+    - uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - name: Deploy to Google cloud Storage
+      uses: 'google-github-actions/upload-cloud-storage@v1'
+      with:
+        path: dist
+        destination: streamline-web
+        parent: false
+
+    - name: Publicly Accessible URL
+      run: echo "https://streamline-web.storage.googleapis.com"
