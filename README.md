@@ -4,7 +4,7 @@
 
 </div>
 
-# Why Streamline?
+# Why Streamline? - Project Description
 
 ## Streamline: Empowering Your To-Do List Experience
 
@@ -29,22 +29,6 @@ We have fused functionality with a sophisticated user interface to create a smoo
 ### Screenshots
 
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
-
-# Project Description
-
-For this project a To Do List Application is being created. Our application will allow its users to create and manage a list of todo items.
-
-The core functionality includes : 
-
-[] Create a task to add to the todo list
-
-[] Read tasks on the todo list 
-
-[] Update tasks in the list
-
-[] Delete tasks on the users todo list
-
-*Include UI snapshots showing the above*
 
 ## :trophy: Team Description
 
@@ -201,19 +185,42 @@ Jest Coverage: To measure and report code coverage during testing.
 
 ## 💻 Coding Practices
 
-Coding standards
-1. Consistency: Follow a consistent coding style for naming conventions across the codebase to ensure readability and maintainability.
-2. Comments and Documentation: Document code logic, functions, and complex algorithms to aid understanding and maintenance.
-3. Modularity and Reusability: Encourage modular and reusable code components to minimise redundancy and promote scalability.
+For this project we needed to ensure good coding practices were in place so that we can produce good quaity software. The main goal is to make sure the code is consistent, readable and maintainable.
 
-Version control
-1. Git Workflow: To manage code changes, branches, and releases effectively through pushing code changes to the same Git repository.
-2. Meaningful Commits: Make concise and descriptive commit messages that reflect the purpose of the changes made.
+### Consistency 
 
-Security
-1. Input Validation and Sanitisation: Implement strict practices to mitigate security vulnerabilities.
-2. Dependency Scanning: Regularly scan dependencies for known vulnerabilities and update them accordingly.
-3. Authentication and Authorisation: Ensure robust authentication through Kinde tool is in place to safeguard user data and application functionality.
+- Managed by following a certain naming conventions, such as camelCasing in both the frontend and backend code
+
+Front End camelCasing
+
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/164ad04f-37b7-4c18-84ba-ffc86fd9fa85)
+
+Back End camelCasing
+
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/dce4b1a2-4dd9-44cc-9b97-6999fb88cb60)
+
+### Naming Conventions
+
+- Variables have been named in a way that is comprehensive and readable
+- This makes it easy to understand what is going on in that block of code
+- Having clear variable names makes the code easier to read and maintain
+
+Front End Naming
+
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/1f0ab6a3-6e6f-402d-bda6-8daf9eddc8fa)
+
+
+Back End Naming
+
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/8e821a9a-d341-4131-976f-9dd69220531f)
+
+### Security
+
+Throughout this project we had to keep security in mind. For this various actions were taken:
+
+- Input Validation and Sanitisation to mitigate security vulnerabilities
+- Dependency Scanning for known vulnerabilities and update them accordingly
+- Authentication and Authorisation through the use of the Kinde tool is in place to safeguard user data and the applications functionality
 
 ## CI Pipeline
 
@@ -241,5 +248,8 @@ Approval Processes: Implement approval mechanisms through git reviews when indiv
 ## ❗ Standards
 
 - ESLint - Open Source tool that finds and fixes issues in the code. Works alongside the CI Pipeline. It finds and automatically fixes syntax errors and is highly customisable making it a powerful tool to keep  code consistent and maintainable.
+
+![Screenshot 2023-12-06 at 14 42 26](https://github.com/streamline-team/streamline-web/assets/92785142/240fa26c-f3e6-471a-ab1e-d169261850b8)
+
 
 ## 🏃 Performance and Accessibility Audit
