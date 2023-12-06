@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
+    "test:e2e": "python selenium/test_streamline-e2e.py",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

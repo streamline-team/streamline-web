@@ -57,4 +57,7 @@ jobs:
       run: sudo apt-get install xvfb
 
     - name: Run Selenium tests
-      run: npm run dev && python selenium/test_streamline-e2e.py
+      run: |
+         npm run dev &
+         npm run test:e2e
+      shell: bash
