@@ -1,9 +1,9 @@
-import { describe, vi, test, expect } from 'vitest';
-import { render, fireEvent, screen } from '@testing-library/react';
-import ToDoMain from './index.tsx'
+import { describe, vi, test } from 'vitest';
+import { render} from '@testing-library/react';
+import CreateNewTask from './index.tsx'
 
-describe('ToDoMain Tests', () => {
-  test('renders ToDoMain', () => {
+describe('CreateNewTask Tests', () => {
+  test('renders CreateNewTask', () => {
 
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
@@ -70,31 +70,58 @@ describe('ToDoMain Tests', () => {
               () => { return {} },
               null
             ]
+          case 'create-tag':
+            return [
+              () => { return {} },
+              null
+            ]
+          case 'delete-tag':
+            return [
+              () => { return {} },
+              null
+            ]
+          case 'create-task':
+            return [
+              () => { return {} },
+              null
+            ]
         }
       }
 
       return { useServicesAPI }
     })
-
-    render(<ToDoMain />);
-
-  }),
-
-    test('renders task list', () => {
+    
 
 
-      expect(screen.getByPlaceholderText('Search tasks...'))
-    });
-
+    const fakeTags = [
+      {
+        id: 1,
+        name: 'Fake Tag 1',
+        background: '#000000',
+        createdAt: '2023-12-06T15:14:57.000Z',
+      },
+      {
+        id: 2,
+        name: 'Fake Tag 2',
+        background: '#FFFFFF',
+        createdAt: '2023-12-06T15:14:57.000Z',
+      }
+    ];
 
     
-    test('updates search state on input change', () => {
-      const input = screen.getByPlaceholderText('Search tasks...') as HTMLInputElement;
-      fireEvent.change(input, { target: { value: 'new task' } });
-      expect(input.value).toBe('new task');
-      
-    });
 
+    render(
+      <CreateNewTask
+      show = {true}
+      onClose = {() => {}}
+      onCreate = {() => {}}
+      allTags = {fakeTags}
+      editTags = {() => {}}
+      />
+    );
+
+
+  })
     
 
 })

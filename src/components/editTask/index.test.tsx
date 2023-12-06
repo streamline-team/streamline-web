@@ -1,9 +1,10 @@
-import { describe, vi, test, expect } from 'vitest';
-import { render, fireEvent, screen } from '@testing-library/react';
-import ToDoMain from './index.tsx'
+import { describe, vi, test } from 'vitest';
+import { render  } from '@testing-library/react';
+import EditTask from './index.tsx'
 
-describe('ToDoMain Tests', () => {
-  test('renders ToDoMain', () => {
+
+describe('EditTask Tests', () => {
+  test('renders editTask', () => {
 
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
@@ -70,31 +71,64 @@ describe('ToDoMain Tests', () => {
               () => { return {} },
               null
             ]
+          case 'create-tag':
+            return [
+              () => { return {} },
+              null
+            ]
+          case 'delete-tag':
+            return [
+              () => { return {} },
+              null
+            ]
         }
       }
 
       return { useServicesAPI }
     })
-
-    render(<ToDoMain />);
-
-  }),
-
-    test('renders task list', () => {
+    
 
 
-      expect(screen.getByPlaceholderText('Search tasks...'))
-    });
-
+    const fakeTags = [
+      {
+        id: 1,
+        name: 'Fake Tag 1',
+        background: '#000000',
+        createdAt: '2023-12-06T15:14:57.000Z',
+      },
+      {
+        id: 2,
+        name: 'Fake Tag 2',
+        background: '#FFFFFF',
+        createdAt: '2023-12-06T15:14:57.000Z',
+      }
+    ];
 
     
-    test('updates search state on input change', () => {
-      const input = screen.getByPlaceholderText('Search tasks...') as HTMLInputElement;
-      fireEvent.change(input, { target: { value: 'new task' } });
-      expect(input.value).toBe('new task');
-      
-    });
 
-    
+    render(
+      <EditTask
+        task={{
+          id: 1,
+          title: 'test!',
+          description: 'Just a simple description with some long text!',
+          done: false,
+          dueAt: '2023-10-11T19:10:00.000Z',
+          priority: 5,
+          createdAt: '2023-12-06T15:03:11.000Z',
+          updatedAt: '2023-12-06T15:03:11.000Z',
+          tags: []
+        }}
+        tags={fakeTags}
+        show={true}
+        onClose={() => {}}
+        allTags={fakeTags}
+        editTags = {() => {}}
+        updateTaskParent = {() => {}}
+      />
+    );
+
+
+  })
 
 })

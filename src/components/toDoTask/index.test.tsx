@@ -1,12 +1,12 @@
-import { describe, vi, test, expect } from 'vitest';
-import { render, fireEvent, screen } from '@testing-library/react';
-import ToDoMain from './index.tsx'
+import { describe, vi, test } from 'vitest';
+import { render} from '@testing-library/react';
+import ToDoTask from './index.tsx'
 
-describe('ToDoMain Tests', () => {
-  test('renders ToDoMain', () => {
-
+describe('ToDoTask Tests', () => {
+  test('renders ToDoTask', () => {
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
+
         switch (testId) {
           case 'list-tasks':
             return [
@@ -76,25 +76,45 @@ describe('ToDoMain Tests', () => {
       return { useServicesAPI }
     })
 
-    render(<ToDoMain />);
-
-  }),
-
-    test('renders task list', () => {
-
-
-      expect(screen.getByPlaceholderText('Search tasks...'))
-    });
-
+    const task = {
+      id: 1,
+      title: 'Finish React Project',
+      description: 'Complete the frontend part of the React project.',
+      done: false,
+      dueAt: '2023-12-12T00:00:00.000Z',
+      createdAt: '2023-11-30T00:00:00.000Z',
+      priority: 3,
+      tags: [{ id: 1, name: 'Work', background: '#4287F5', createdAt: '2023-11-01T00:00:00.000Z' }, { id: 2, name: 'Urgent', background: '#ff0000', createdAt: '2023-11-01T00:00:00.000Z' }]
+    }
 
     
-    test('updates search state on input change', () => {
-      const input = screen.getByPlaceholderText('Search tasks...') as HTMLInputElement;
-      fireEvent.change(input, { target: { value: 'new task' } });
-      expect(input.value).toBe('new task');
+    const tags = {
+      id: 1,
+      name: 'Urgent',
+      background: '#ff0000',
+      createdAt: '2023-11-01T00:00:00.000Z'
+    }
+    
+    const allTags = [tags]
+
+    const updateTask = () => {
+      console.log('updateTask')
+    }
+
+    render(<ToDoTask task={task} allTags={allTags}  updateTask={updateTask}  deleteTask={updateTask} editTags={updateTask} />);
+
+
+  })  
+
+    
+
+
+
+
+
+
       
     });
 
     
-
-})
+    
