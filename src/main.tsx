@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import {KindeProvider} from "@kinde-oss/kinde-auth-react";
+import { KindeProvider } from '@kinde-oss/kinde-auth-react'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,5 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     >
       <App />
     </KindeProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
