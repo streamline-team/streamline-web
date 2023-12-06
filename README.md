@@ -188,7 +188,7 @@ The team project follows the Agile methodology, emphasising adaptability, collab
 - Meeting at the end of a sprint to demonstrate completed work and gather feedback, suggest improvements and furure goals. Despite the time contraint a review on this application build it was a vital mandatory checkpoint. Feedback allows quick last minute adjustments to be implimentented that maximise project value, and keeping everyone aligned. 
 - Reflective session to also identify what went well and areas for improvement.
 
-#Three main sprint review/repo points: 
+### Three main sprint review/repo points: 
 
 1. 
 - Review point: Evaluation of Time Allocation and Task Completion
@@ -235,12 +235,12 @@ Maintaining Workflow: In spite of individual technical difficulties, teamwork te
 Our streamline project relies on the software requirements converted to test cases before software is fully developed. Software development is tracked by repeatedly testing the software against all test cases for each section of functionality for both Front-End and Backend. Selecting Test-Driven Development (TDD) is an ideal match for our project's objectives and schedule. The "test first" approach of TDD guarantees a stable codebase through ongoing functional validation. TDD's iterative cycle of creating tests before code helps us save time in our small 14-day project by enabling faster fixes, lowering total debugging time, and finding errors early. In our fast-paced development process, this approach increases code maintainability, modular design, and code reliability. Because of its methodical approach, TDD reduces the possibility of faults and delivers a more consistent and predictable result, which perfectly satisfies our deadline-driven demands for quality and efficiency.
 
 ## Testing Tools Used
-# Front-End Testing: 
+### Front-End Testing: 
 - Vitest and Selenium
 
 These tools were carefully selected due to their capabilities in automating and stinulating user interactions, ensuring the functionality and usability of the web application across different browsers and environemts. Vitest offers quick snapshot testing, while selenium's versatility aids in end- to end testing, validating the user interface and experience with Streamline. 
 
-# Back-End Testing:
+###  Back-End Testing:
 - Jest, Mocking and Own utilities
 
 These test server-side functionalities, API endpoints and business logic. Jest provides a robust testing framework, while mocking and incorporating our own custom utilities assit in building controlled tesingenvironments and isolating specific elements for thorough and efficient testing of the back-end system.
@@ -255,6 +255,14 @@ These test server-side functionalities, API endpoints and business logic. Jest p
 6. Smoke testing: a smoke test is a basic, preliminary test that checks if the most critical functionalities of an application are working such as our task tagging and priority tagging features. It aims to verify that the application can perform essential tasks without encountering major issues.
 
 ## Testing Structure
+
+We have formatted the tests so each route/feature has its own indextest.ts file which holds tests for the entire functionality for that complete route.  
+i.e Schema folder holds:
+- index.test.ts
+- index.ts
+- types.ts
+
+This is mimicked for all folders and code functionality to ensure clear and well presented tests for review. 
 
 ## Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
