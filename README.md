@@ -48,6 +48,24 @@ The core functionality includes :
 - Deividas Dapkus  - Front End Development, % contribution
 
 ## :toolbox: Tools Used
+
+🖌️ UI Design - Figma
+The use of figma allows us as a team to simultaneously collaborate when building the design for our to do list application. Figma allowed us as a team to create intital designs and modify eachothers ideas to build a UI that everyone in the team agrees on. This includes various color schemes, logos, icons and overall layout.
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/26f5ab6c-b161-4578-bbb6-19b915aac248)
+
+
+Drizzle ORM, Jest, Docker (mysql test instance), CI Github Actions automatically triggers tests
+Mocks (authentication mocking)
+
+testing script automatically starts docker network and mysql instance and terminates at the end
+
+Each test is wrapped in its own transaction to ensure that tests are isolated effectively
+
+Artifact registry -> where we are uploading a built docker container image of our backend to GCP
+Cloud Run - Serverless service for running our node backend
+Cloud SQL - mysql database instance in GCP
+MENTIONG STAGING + PRODUCTION ENVIRONMENTS (both backend and frontend)
+
 Version Control
 - Git: Version control suystem for tracking changes in the codebase.
 - GitHub: Hosting the repository and managing codebase collaboration.
