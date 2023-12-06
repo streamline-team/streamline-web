@@ -61,6 +61,8 @@ The core functionality includes :
 The use of figma allows us as a team to simultaneously collaborate when building the design for our to do list application. Figma allowed us as a team to create intital designs and modify eachothers ideas to build a UI that everyone in the team agrees on. This includes various color schemes, logos, icons and overall layout.
 ![image](https://github.com/streamline-team/streamline-web/assets/92785142/26f5ab6c-b161-4578-bbb6-19b915aac248)
 
+### Click here for our [Figma](https://www.figma.com/file/INXgbKcbkvXGGuLRbstJqM/Untitled?type=design&node-id=49%3A19&mode=design&t=xfOFnfn8JzfBgMjh-1). 
+
  🖥️ Development
  
  ### Version Control
@@ -231,5 +233,7 @@ Approval Processes: Implement approval mechanisms through git reviews when indiv
 
 
 ## ❗ Standards
+
+- ESLint - Open Source tool that finds and fixes issues in the code. Works alongside the CI Pipeline. It finds and automatically fixes syntax errors and is highly customisable making it a powerful tool to keep  code consistent and maintainable.
 
 ## 🏃 Performance and Accessibility Audit
