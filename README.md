@@ -33,29 +33,29 @@ In a world overwhelmed with online tools riddled with advertisements and lacking
 
 We have fused functionality with a sophisticated user interface to create a smooth experience.
 
-### Screenshots
+### Screenshots (Add images from the google doc)
 
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
 
 
 ## :trophy: Team Description/Members
 
-- **Bruno Silva - Back End Development (25% contribution):**
+- **Bruno Silva - Back End Development + README document (25% contribution):**
   - Responsible for building the server-side logic, database management, and core functionality of the to-do list.
   - Setting up tools, environments to outline the project build for the team. 
   - Contributes 25% effort to the project's development.
 
-- **Rebeca Williams - Half Front End Testing + Half Back End Testing (25% contribution):**
+- **Rebeca Williams - Half Front End Testing + Half Back End Testing README document (25% contribution):**
   - Tasked with creating and executing tests to ensure the reliability and functionality of the back-end code.
   - Responsible for testing the user interface, interactions, and overall user experience of the application.
   - Contributes 25% effort to ensuring the robustness of the interface and application.
 
-- **Safiya Behanzin - Half Front End Testing + Half Back End Testing (25% contribution):**
+- **Safiya Behanzin - Half Front End Testing + Half Back End Testing + README document (25% contribution):**
   - Responsible for testing the user interface, interactions, and overall user experience of the application.
   - Tasked with creating and executing tests to ensure the reliability and functionality of the back-end code.
   - Contributes 25% effort to ensuring a smooth and bug-free interface and application.
 
-- **Deividas Dapkus - Front End Development (25% contribution):**
+- **Deividas Dapkus - Front End Development + README document (25% contribution):**
   - In charge of designing and implementing the visual components and client-side functionalities UI interface.
   - Contributes 25% effort to crafting an intuitive and responsive front-end experience.
 
