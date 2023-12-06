@@ -41,8 +41,9 @@ We have fused functionality with a sophisticated user interface to create a smoo
 ![Streamline3](https://github.com/streamline-team/streamline-web/assets/92785142/cc04aea2-09f5-4012-a99e-cc83c5716ede)
 
 
-**Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
+**Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters. Here's a quick look at some of the functionality when running through our automated tests with Selenium:
 
+![Streamline Recording](https://github.com/streamline-team/streamline-web/assets/54673205/628a66bd-ab40-4bbf-bb30-16b7d14012d4)
 
 ## :trophy: Team Description/Members
 
