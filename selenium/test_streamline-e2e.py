@@ -5,7 +5,15 @@ import unittest
 from selenium.webdriver.common.action_chains import ActionChains
 import os
 import os
+import chromedriver_autoinstaller
+from pyvirtualdisplay import Display
+from sys import platform
 
+if platform == "linux" or platform == "linux2":
+    display = Display(visible=0, size=(800, 800))
+    display.start()
+
+chromedriver_autoinstaller.install()
 
 def make_orderer():
     order = {}
@@ -26,11 +34,13 @@ unittest.defaultTestLoader.sortTestMethodsUsing = compare
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 new_folder_path = os.path.join(current_directory, "test_images")
+
 os.makedirs(new_folder_path)
 
-
 def clear_folder(folder_path):
-    for filename in os.listdir(folder_path):
+    directories = os.listdir(folder_path)
+
+    for filename in directories:
         file_path = os.path.join(folder_path, filename)
         if os.path.isfile(file_path):
             os.remove(file_path)
@@ -38,14 +48,21 @@ def clear_folder(folder_path):
             clear_folder(file_path)
             os.rmdir(file_path)
 
+    if len(directories) == 0:
+        os.rmdir(folder_path)
+
 clear_folder(new_folder_path)
-
-
 
 class TestMainComponent(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+
+        chrome_options.add_argument("--window-size=1200,1200")
+        chrome_options.add_argument("--ignore-certificate-errors")
+
+        cls.driver = webdriver.Chrome(options = chrome_options)
+
         cls.password = "2oLc8DX2!PpZ4"
         cls.email = "bruno.silva+test@ada.ac.uk"
         cls.driver.get("http://localhost:3030")
