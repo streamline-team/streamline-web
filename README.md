@@ -31,12 +31,27 @@ We have fused functionality with a sophisticated user interface to create a smoo
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
 
 
-## :trophy: Team Description
+## :trophy: Team Description/Members
 
-- Bruno Silva - Back End Development, 25% contribution
-- Rebeca Williams - Back End Testing, 25% contribution
-- Safiya Behanzin - Front End Testing, 25% contribution
-- Deividas Dapkus  - Front End Development, 25% contribution
+- **Bruno Silva - Back End Development (25% contribution):**
+  - Responsible for building the server-side logic, database management, and core functionality of the to-do list.
+  - Setting up tools, environments to outline the project build for the team. 
+  - Contributes 25% effort to the project's development.
+
+- **Rebeca Williams - Half Front End Testing + Half Back End Testing (25% contribution):**
+  - Tasked with creating and executing tests to ensure the reliability and functionality of the back-end code.
+  - Responsible for testing the user interface, interactions, and overall user experience of the application.
+  - Contributes 25% effort to ensuring the robustness of the interface and application.
+
+- **Safiya Behanzin - Half Front End Testing + Half Back End Testing (25% contribution):**
+  - Responsible for testing the user interface, interactions, and overall user experience of the application.
+  - Tasked with creating and executing tests to ensure the reliability and functionality of the back-end code.
+  - Contributes 25% effort to ensuring a smooth and bug-free interface and application.
+
+- **Deividas Dapkus - Front End Development (25% contribution):**
+  - In charge of designing and implementing the visual components and client-side functionalities UI interface.
+  - Contributes 25% effort to crafting an intuitive and responsive front-end experience.
+
 
 ## :toolbox: Tools Used
 
@@ -148,7 +163,55 @@ For the backend to work you will need to clone the backend repository and follow
 
 ## 💼 Project Workflow
 
-Code Commits for Collaboration:
+The team used Miro for tracking the project management to manage issues and use the kanban methodology and maintain a workflow where we could continuously improve, visualise our workflow on a regular basis and sort tasks in order of priority. 
+
+
+# Project Workflow Methodology - Agile Approach
+
+## Overview
+
+The team project follows the Agile methodology, emphasising adaptability, collaboration, and iterative development. The workflow is structured around continuous feedback and frequent iterations to deliver a high-quality  Web appliction. 
+
+## Agile Practices
+
+### Sprints
+- Time-boxed iterations (usually 1-4 weeks) for development and delivery of product increments.
+
+### Backlog Refinement
+- Ongoing process of reviewing, refining, and prioritising items in the product backlog.
+
+### Daily Stand-ups
+- Short meetings to discuss progress, impediments, and plan the day's work.
+-Abapted time execution of these calls to accompdate everyones back to work schedules to maintain structure and productivity. 
+
+### Sprint Review and Retorospective 
+- Meeting at the end of a sprint to demonstrate completed work and gather feedback, suggest improvements and furure goals. Despite the time contraint a review on this application build it was a vital mandatory checkpoint. Feedback allows quick last minute adjustments to be implimentented that maximise project value, and keeping everyone aligned. 
+- Reflective session to also identify what went well and areas for improvement.
+
+#Three main sprint review/repo points: 
+
+1. 
+- Review point: Evaluation of Time Allocation and Task Completion
+- Focus: More Analysing the accuracy of estimated task durations versus actual completion times for the sprint's user stories and tasks.
+- Objective: Identified areas where time estimates deviated significantly, discuss reasons, and strategise improvements for better time allocation in subsequent sprints.
+
+2.
+- Review Point: User feedback Integrartion
+- Focus: Showcase enhancements made based on user feedback collected from previous iterations or user testing sessions. 
+- Objective: Highlight hpw user feedback influenced feature modifications or additions, fostering a user-centric approach and ensuring alignment with user needs. 
+
+3.
+- Review Point: More Key Performance Indecators needed, KPIs
+- Focus: Display relevant metrics like user engagement, task completion rates, or performance benchmarks set for the sprint. 
+- Objective: Discuss the achieved KPIs, their imlications on the streamlines success, and strategies to improve or maintain these metrics in subsequent sprints.
+
+
+## Methodology Conclusion
+
+Agile's flexibility and iterative design made it the best option for Streamline’s implementation. Agile, as opposed to Waterfall, accommodates our shortened project schedule by enabling regular feedback and modifications. It encourages teamwork and adapts to changing needs, which are essential in a rapid development. In contrast to Waterfall's linear structure, which lacks flexibility and waits feedback until project completion, its incremental delivery assures early benefit and mitigates risks. Because of its flexibility and constant refinement, agile is the best technique for quick and responsive development because it precisely matches our changing project needs. 
+
+
+## Code Commits for Collaboration:
 
 Teamwork: Placed a strong emphasis on working together during testing and code commits.
 
@@ -159,7 +222,7 @@ Shared Responsibilities: Made sure that every team member participated and fufil
 
 Knowledge Transfer and Documentation: Enabled team members to share ideas, solutions, and code fragments by means of cooperative documentation, guaranteeing a shared understanding and knowledge base.
 
-Effect on Workforce Efficiency: 
+## Effect on Workforce Efficiency: 
 
 Maintaining Workflow: In spite of individual technical difficulties, teamwork techniques like partnered programming made sure there were few hiccups.
 
