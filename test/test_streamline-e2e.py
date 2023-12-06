@@ -42,9 +42,6 @@ clear_folder(new_folder_path)
 
 
 
-
-
-
 class TestMainComponent(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
