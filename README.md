@@ -1,3 +1,9 @@
+<div align="center">
+ 
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/506db121-6f77-4b50-a9aa-2b296b2a2dc8)
+
+</div>
+
 # Why Streamline?
 
 ## Streamline: Empowering Your To-Do List Experience
