@@ -27,6 +27,8 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 
 new_folder_path = os.path.join(current_directory, "test_images")
 
+os.makedirs(new_folder_path)
+
 def clear_folder(folder_path):
     directories = os.listdir(folder_path)
 
@@ -42,9 +44,6 @@ def clear_folder(folder_path):
         os.rmdir(folder_path)
 
 clear_folder(new_folder_path)
-
-os.makedirs(new_folder_path)
-
 
 class TestMainComponent(unittest.TestCase):
     @classmethod
