@@ -274,6 +274,9 @@ i.e Schema folder holds:
 
 This is mimicked for all folders and code functionality to ensure clear and well presented tests for review. 
 
+![Screenshot 2023-12-06 at 12 07 10](https://github.com/streamline-team/streamline-web/assets/92785142/383e3e32-0d48-4e46-a3c4-2e24e41f71bb)
+
+
 ## Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
 The Streamlines entire application achieves ... % code coverage. 
@@ -335,6 +338,9 @@ Having defined workflows, version control integration and approval processes mea
 ![Screenshot 2023-12-06 at 12 01 16](https://github.com/streamline-team/streamline-web/assets/92785142/d964ca45-a041-4705-bed3-b49a8abdaa61)
 
 ![Screenshot 2023-12-06 at 19 45 29](https://github.com/streamline-team/streamline-web/assets/92785142/7900b18d-d0e8-4340-b564-1a2ec472ad84)
+
+![Screenshot 2023-12-06 180740](https://github.com/streamline-team/streamline-web/assets/92785142/fdf705b9-a428-4f5b-b414-5ae28b9c9652)
+
 
 
 
