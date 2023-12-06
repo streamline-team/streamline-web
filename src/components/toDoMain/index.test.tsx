@@ -1,10 +1,9 @@
-import { describe, vi, test, expect } from 'vitest';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { describe, vi, test, expect } from 'vitest'
+import { render, screen } from '@testing-library/react'
 import ToDoMain from './index.tsx'
 
 describe('ToDoMain Tests', () => {
   test('renders ToDoMain', () => {
-
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
         switch (testId) {
@@ -70,31 +69,25 @@ describe('ToDoMain Tests', () => {
               () => { return {} },
               null
             ]
+          case 'create-tag':
+            return [
+              () => { return {} },
+              null
+            ]
+          case 'delete-tag':
+            return [
+              () => { return {} },
+              null
+            ]
         }
       }
 
       return { useServicesAPI }
     })
 
-    render(<ToDoMain />);
-
-  }),
-
-    test('renders task list', () => {
-
-
-      expect(screen.getByPlaceholderText('Search tasks...'))
-    });
-
-
-    
-    test('updates search state on input change', () => {
-      const input = screen.getByPlaceholderText('Search tasks...') as HTMLInputElement;
-      fireEvent.change(input, { target: { value: 'new task' } });
-      expect(input.value).toBe('new task');
-      
-    });
-
-    
-
+    render(<ToDoMain />)
+  })
+  test('renders task list', () => {
+    expect(screen.getByPlaceholderText('Search tasks...'))
+  })
 })

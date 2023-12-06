@@ -1,10 +1,9 @@
-import { describe, vi, test } from 'vitest';
-import { render } from '@testing-library/react';
+import { describe, vi, test } from 'vitest'
+import { render } from '@testing-library/react'
 import { TagPicker, Tag } from './index.tsx'
 
 describe('tag/tagpicker test Tests', () => {
   test('renders TagPicker', () => {
-
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
         switch (testId) {
@@ -85,45 +84,39 @@ describe('tag/tagpicker test Tests', () => {
 
       return { useServicesAPI }
     })
-    
-
 
     const fakeTags = [
       {
         id: 1,
         name: 'Fake Tag 1',
         background: '#000000',
-        createdAt: '2023-12-06T15:14:57.000Z',
+        createdAt: '2023-12-06T15:14:57.000Z'
       },
       {
         id: 2,
         name: 'Fake Tag 2',
         background: '#FFFFFF',
-        createdAt: '2023-12-06T15:14:57.000Z',
+        createdAt: '2023-12-06T15:14:57.000Z'
       }
-    ];
+    ]
 
     interface tagsProps {
-      id: number;
-      name: string;
-      background: string;
-      createdAt: string;
+      id: number
+      name: string
+      background: string
+      createdAt: string
     }
-    
 
     render(
       <TagPicker
-        tags={fakeTags as tagsProps[]} 
+        tags={fakeTags as tagsProps[]}
         onAdd={() => {} }
         onRemove={() => {}}
       />
-    );
-
-
+    )
   })
 
   test('renders Tag', () => {
-
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
         switch (testId) {
@@ -204,40 +197,34 @@ describe('tag/tagpicker test Tests', () => {
 
       return { useServicesAPI }
     })
-    
-
 
     const fakeTags = [
       {
         id: 1,
         name: 'Fake Tag 1',
         background: '#000000',
-        createdAt: '2023-12-06T15:14:57.000Z',
+        createdAt: '2023-12-06T15:14:57.000Z'
       },
       {
         id: 2,
         name: 'Fake Tag 2',
         background: '#FFFFFF',
-        createdAt: '2023-12-06T15:14:57.000Z',
+        createdAt: '2023-12-06T15:14:57.000Z'
       }
-    ];
+    ]
 
     interface tagsProps {
-      id: number;
-      name: string;
-      background: string;
-      createdAt: string;
+      id: number
+      name: string
+      background: string
+      createdAt: string
     }
-    
 
     render(
       <Tag
-        tag={fakeTags[0] as tagsProps} 
+        tag={fakeTags[0] as tagsProps}
         onRemove={() => {} }
       />
-    );
-
-
+    )
   })
-
 })

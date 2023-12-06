@@ -1,12 +1,11 @@
-import { describe, vi, test } from 'vitest';
-import { render} from '@testing-library/react';
+import { describe, vi, test } from 'vitest'
+import { render } from '@testing-library/react'
 import ToDoTask from './index.tsx'
 
 describe('ToDoTask Tests', () => {
   test('renders ToDoTask', () => {
     vi.mock('../../services/services-hook.ts', () => {
       const useServicesAPI = ({ testId }: { testId: string }): Array<(() => unknown) | null> | undefined => {
-
         switch (testId) {
           case 'list-tasks':
             return [
@@ -87,34 +86,15 @@ describe('ToDoTask Tests', () => {
       tags: [{ id: 1, name: 'Work', background: '#4287F5', createdAt: '2023-11-01T00:00:00.000Z' }, { id: 2, name: 'Urgent', background: '#ff0000', createdAt: '2023-11-01T00:00:00.000Z' }]
     }
 
-    
     const tags = {
       id: 1,
       name: 'Urgent',
       background: '#ff0000',
       createdAt: '2023-11-01T00:00:00.000Z'
     }
-    
+
     const allTags = [tags]
 
-    const updateTask = () => {
-      console.log('updateTask')
-    }
-
-    render(<ToDoTask task={task} allTags={allTags}  updateTask={updateTask}  deleteTask={updateTask} editTags={updateTask} />);
-
-
-  })  
-
-    
-
-
-
-
-
-
-      
-    });
-
-    
-    
+    render(<ToDoTask task={task} allTags={allTags} updateTask={() => { }} deleteTask={() => { }} editTags={() => { }} />)
+  })
+})
