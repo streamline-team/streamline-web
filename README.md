@@ -83,22 +83,7 @@ The use of figma allows us as a team to simultaneously collaborate when building
 ### User Authentication
 - Kinde: Powerful  thrid party authentication tool that allows user authentication to be managed seamlessly
 
-### A/B Testing of Initial Designs
-
-When determining which design to se we completed some A/B testing with a small group of potential users. A/B testing is a way of comparing the original and modified design of the page. To complete this a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdo-n_iW0iU2F9WOtguNcdoCoo2RHV4GrtEv7FK5GllVd65aA/viewform?usp=sf_link) was given to a group of potential users. They reviewed the 2 designs, voted for their favourite and gave comments. Using this feedback we were able to modify the design before deciding on our final UI design.
-![image](https://github.com/streamline-team/streamline-web/assets/92785142/24abad49-1579-4a2b-a4f2-de2a53681cdb)
-
-
-Drizzle ORM, Jest, Docker (mysql test instance), CI Github Actions automatically triggers tests
-Mocks (authentication mocking)
-
-testing script automatically starts docker network and mysql instance and terminates at the end
-
-Each test is wrapped in its own transaction to ensure that tests are isolated effectively
-
 Artifact registry -> where we are uploading a built docker container image of our backend to GCP
-Cloud Run - Serverless service for running our node backend
-Cloud SQL - mysql database instance in GCP
 MENTIONG STAGING + PRODUCTION ENVIRONMENTS (both backend and frontend)
 
 Version Control
@@ -108,25 +93,23 @@ Version Control
 Testing
 Jest: JavaScript testing framework for unit, integration, mock, smoke and integration testing.
 React testing library: Testing React components and their interactions.
-Selenium: For End-to-End Testing
+Selenium: End-to-End Testing
+
+- Testing script automatically starts docker network and mysql instance and terminates at the end
+- Each test is wrapped in its own transaction to ensure that tests are isolated effectively
 
 Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
 
-Linters
-
-Project Management Tools
-
-Performance and Accessibility Audit
-Accessibility Testing: 
-
 Database
 PlanetScale: Database management system used for scalability and reliability.
+Cloud SQL - mysql database instance in GCP
 
 Deployment 
+Cloud Run - Serverless service for running our node backend
 
 CI/CD
-GitHub Actions: Setting up workflows for automated testing, building and deployment. 
+GitHub Actions: Setting up workflows for automated testing, building, deployment and authentication mocking. 
 
 Other Tools/Services
 Tailwind CSS: libraries for styling and UI components
@@ -144,6 +127,11 @@ Front End Packages and versions:
         "react-feather": "^2.0.10",
         "react-router-dom": "^6.20.1",
         "use-local-storage-state": "^19.1.0"
+
+### A/B Testing of Initial Designs
+
+When determining which design to se we completed some A/B testing with a small group of potential users. A/B testing is a way of comparing the original and modified design of the page. To complete this a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdo-n_iW0iU2F9WOtguNcdoCoo2RHV4GrtEv7FK5GllVd65aA/viewform?usp=sf_link) was given to a group of potential users. They reviewed the 2 designs, voted for their favourite and gave comments. Using this feedback we were able to modify the design before deciding on our final UI design.
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/24abad49-1579-4a2b-a4f2-de2a53681cdb)
 
 
 ## 📖 How To Run The Application
@@ -286,6 +274,9 @@ The Streamlines entire application achieves ... % code coverage.
 ![Screenshot 2023-12-06 at 18 13 33](https://github.com/streamline-team/streamline-web/assets/92785142/49bb59e4-24b6-4701-9331-c78bfaaa6ab8)
 
 ![Screenshot 2023-12-06 at 12 00 22](https://github.com/streamline-team/streamline-web/assets/92785142/21a88f8e-925f-4568-a1d2-8dcec44c8f69)
+
+![Screenshot 2023-12-06 at 12 05 00](https://github.com/streamline-team/streamline-web/assets/92785142/33cab8c9-423c-4d53-82a0-80a7ee54451e)
+
 
 ## 💻 Coding Practices
 
