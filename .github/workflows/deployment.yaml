@@ -44,8 +44,20 @@ jobs:
     - name: Deploy to Google cloud Storage
       uses: 'google-github-actions/upload-cloud-storage@v1'
       with:
-        path: dist
+        path: dist/*
         destination: streamline-web
 
     - name: Publicly Accessible URL
       run: echo "https://streamline-web.storage.googleapis.com"
+
+
+
+
+
+
+
+
+
+
+
+
