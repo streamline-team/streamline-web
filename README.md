@@ -1,27 +1,11 @@
 [issues-badge]: https://img.shields.io/github/issues/adaapp/testing-dec2021-team3.svg?style=for-the-badge
-[issues-url]: https://github.com/adaapp/testing-dec2021-team3/issues
-[contributors-badge]: https://img.shields.io/github/contributors/adaapp/testing-dec2021-team3.svg?style=for-the-badge
-[contributors-url]: https://github.com/adaapp/testing-dec2021-team3/graphs/contributors
-[forks-badge]: https://img.shields.io/github/forks/adaapp/testing-dec2021-team3.svg?style=for-the-badge
-[forks-url]: https://github.com/adaapp/testing-dec2021-team3/network/members
-[stars-badge]: https://img.shields.io/github/stars/adaapp/testing-dec2021-team3.svg?style=for-the-badge
-[stars-url]: https://github.com/adaapp/testing-dec2021-team3/stargazers
-[license-badge]: https://img.shields.io/github/license/adaapp/testing-dec2021-team3.svg?style=for-the-badge
-[license-url]: https://github.com/adaapp/testing-dec2021-team3/blob/master/LICENSE.txt
-[coverage-badge]: https://img.shields.io/coveralls/github/adaapp/testing-dec2021-team3?style=for-the-badge
-[coverage-url]: https://coveralls.io/github/streamline-team/streamline-services
-
 <div align="center">
 
 <img width="200" height="200" alt="Screenshot 2023-12-06 at 18 39 1" src="https://github.com/streamline-team/streamline-web/assets/92785142/506db121-6f77-4b50-a9aa-2b296b2a2dc8">
 
 <h1>Streamline</h1>
 
-[![Issues][issues-badge]][issues-url]
-[![Contributors][contributors-badge]][contributors-url]
-[![Forks][forks-badge]][forks-url]
-[![Stargazers][stars-badge]][stars-url]
-[![Coverage][coverage-badge]][coverage-url]
+[![Coverage Status](https://coveralls.io/repos/github/streamline-team/streamline-services/badge.svg?branch=bruno/ci-implementation&t=qOJE22)](https://coveralls.io/github/streamline-team/streamline-services?branch=bruno/ci-implementation)
 
 <img width="1827" alt="Screenshot 2023-12-06 at 18 39 1" src="https://github.com/streamline-team/streamline-web/assets/54673205/9ac4e030-2a5a-499d-9465-8387304d3514">
 
