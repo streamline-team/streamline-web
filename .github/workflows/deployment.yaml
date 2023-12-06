@@ -36,6 +36,14 @@ jobs:
 
     - name: Vite build
       run: npm run build
+    
+    - name: Create .env file
+      run: |
+        echo "VITE_KINDE_CLIENT_ID=${{ vars.VITE_KINDE_CLIENT_ID }}" >> .env
+        echo "VITE_KINDE_DOMAIN=${{ vars.VITE_KINDE_DOMAIN }}" >> .env
+        echo "VITE_KINDE_LOGOUT_URI=${{ vars.VITE_KINDE_LOGOUT_URI }}" >> .env
+        echo "VITE_KINDE_REDIRECT_URI=${{ vars.VITE_KINDE_REDIRECT_URI }}" >> .env
+        echo "VITE_STREAMLINE_SERVICES_URL=${{ vars.VITE_STREAMLINE_SERVICES_URL }}" >> .env
 
     - uses: 'google-github-actions/auth@v2'
       with:
