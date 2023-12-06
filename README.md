@@ -102,6 +102,21 @@ For the backend to work you will need to clone the backend repository and follow
 
 # Project Workflow
 
+Code Commits for Collaboration:
+
+Teamwork: Placed a strong emphasis on working together during testing and code commits.
+
+Mutual Support: In order to maintain productivity, the team sometimes programmed in pairs when someone's environment (such as VS Code) experienced technical difficulties.
+By working in pairs to solve coding problems or carry out testing tasks, paired programming allowed for continuous development and avoided setbacks.
+
+Shared Responsibilities: Made sure that every team member participated and fufilled their reponsibilities. When completing the testing process, particularly in situations where a specific team member found it difficult to commit code directly we joined forced on one team members sigular branch to commit code changes. 
+
+Knowledge Transfer and Documentation: Enabled team members to share ideas, solutions, and code fragments by means of cooperative documentation, guaranteeing a shared understanding and knowledge base.
+
+Effect on Workforce Efficiency: 
+
+Maintaining Workflow: In spite of individual technical difficulties, teamwork techniques like partnered programming made sure there were few hiccups.
+
 # Test Methodologies and Tools
 
 Methodology
@@ -140,6 +155,27 @@ Security
 3. Authentication and Authorisation: Ensure robust authentication through Kinde tool is in place to safeguard user data and application functionality.
 
 # CI Pipeline
+
+Continuous Integration (CI):
+
+Tools: GitHub Actions
+
+Process Overview: 
+Automated Testing: Trigger some automated tests. 
+Code Quality Checks: Run linters, unit tests, and integration tests and smoke tests.
+Deployment Automation: Deploy the application based on defined triggers (successful tests, specific branches).
+
+Pipeline Components:
+Testing Stage: Execute comprehensive test suites (unit, integration, end-to-end) on virtual environments.
+Quality Checks: Ensure adherence to coding standards, security checks, and dependency vulnerabilities.
+Deployment Stage: Automate deployment to staging/production environments based on predefined conditions (Passing tests, Specific branch).
+
+CI Pipeline Standardisation:
+
+Defined Workflow: Establish a standardised workflow from code changes to deployment.
+Version Control Integration: Link CI pipelines to specific branches for some cases of automated testing and deployment based on version control triggers.
+Approval Processes: Implement approval mechanisms through git reviews when individuals pushed code for certain final deployment stages, ensuring manual confirmation before production deployment.
+
 
 # Standards
 
