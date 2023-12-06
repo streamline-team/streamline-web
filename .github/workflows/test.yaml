@@ -41,3 +41,14 @@ jobs:
 
     - name: Run Jest tests
       run: npm run test
+
+    - name: Setup Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12' 
+
+    - name: Install Selenium
+      run: pip install selenium
+
+    - name: Run Selenium tests
+      run: npm run dev && python selenium/test_streamline-e2e.py

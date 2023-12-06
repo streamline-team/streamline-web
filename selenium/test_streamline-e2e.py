@@ -26,11 +26,11 @@ unittest.defaultTestLoader.sortTestMethodsUsing = compare
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 new_folder_path = os.path.join(current_directory, "test_images")
-os.makedirs(new_folder_path)
-
 
 def clear_folder(folder_path):
-    for filename in os.listdir(folder_path):
+    directories = os.listdir(folder_path)
+
+    for filename in directories:
         file_path = os.path.join(folder_path, filename)
         if os.path.isfile(file_path):
             os.remove(file_path)
@@ -38,8 +38,12 @@ def clear_folder(folder_path):
             clear_folder(file_path)
             os.rmdir(file_path)
 
+    if len(directories) == 0:
+        os.rmdir(folder_path)
+
 clear_folder(new_folder_path)
 
+os.makedirs(new_folder_path)
 
 
 class TestMainComponent(unittest.TestCase):
