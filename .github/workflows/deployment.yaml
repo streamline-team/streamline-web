@@ -45,7 +45,7 @@ jobs:
       uses: 'google-github-actions/upload-cloud-storage@v1'
       with:
         path: dist
-        destination: gs://streamline-web
+        destination: streamline-web
 
     - name: Publicly Accessible URL
       run: echo "https://streamline-web.storage.googleapis.com"
