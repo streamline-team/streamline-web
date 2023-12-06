@@ -5,7 +5,15 @@ import unittest
 from selenium.webdriver.common.action_chains import ActionChains
 import os
 import os
+import chromedriver_autoinstaller
+from pyvirtualdisplay import Display
+from sys import platform
 
+if platform == "linux" or platform == "linux2":
+    display = Display(visible=0, size=(800, 800))
+    display.start()
+
+chromedriver_autoinstaller.install()
 
 def make_orderer():
     order = {}
@@ -48,7 +56,13 @@ clear_folder(new_folder_path)
 class TestMainComponent(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+
+        chrome_options.add_argument("--window-size=1200,1200")
+        chrome_options.add_argument("--ignore-certificate-errors")
+
+        cls.driver = webdriver.Chrome(options = chrome_options)
+
         cls.password = "2oLc8DX2!PpZ4"
         cls.email = "bruno.silva+test@ada.ac.uk"
         cls.driver.get("http://localhost:3030")

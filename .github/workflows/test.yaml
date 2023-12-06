@@ -47,8 +47,14 @@ jobs:
       with:
         python-version: '3.12' 
 
+    - name: Remove previous chrome instances
+      run: sudo apt purge google-chrome-stable
+
     - name: Install Selenium
-      run: pip install selenium
+      run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay
+
+    - name: Install xvfb
+      run: sudo apt-get install xvfb
 
     - name: Run Selenium tests
       run: npm run dev && python selenium/test_streamline-e2e.py
