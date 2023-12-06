@@ -1,38 +1,38 @@
 import { useEffect } from 'react'
 import './App.css'
-import Todocomp from './components/toDoMain';
+import Todocomp from './components/toDoMain'
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
 import logo from './assets/logo.svg'
 
-function App() {
-  const { login, isAuthenticated, isLoading, user } = useKindeAuth();
+function App (): JSX.Element {
+  const { login, isAuthenticated, isLoading, user } = useKindeAuth()
 
   useEffect(() => {
     if (isAuthenticated || isLoading) {
-      return;
+      return
     }
 
     const loginRedirect = async (): Promise<void> => {
-      await login();
-    };
+      await login()
+    }
 
-    loginRedirect();
-  }, [isAuthenticated, isLoading]);
+    loginRedirect()
+  }, [isAuthenticated, isLoading])
 
   if (!user) {
     return (
       <>
         <span>Not Authenticated!</span>
       </>
-    );
+    )
   }
 
   return (
     <>
-      <img src={logo} alt="Logo" className="absolute top-0 left-0 w-32 h-32 p-4"  /> {/* Add the logo image */}
-      <Todocomp  />
+      <img src={logo} alt="Logo" className="absolute top-0 left-0 w-32 h-32 p-4" /> {/* Add the logo image */}
+      <Todocomp />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

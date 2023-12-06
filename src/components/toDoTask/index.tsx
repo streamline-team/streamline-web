@@ -1,24 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Calendar, BarChart, Circle, Plus, Minus } from "react-feather";
-import MDEditor from "@uiw/react-md-editor";
-import "./index.css";
-import EditTask from "../editTask/index.tsx";
-import { useServicesAPI } from "../../services/services-hook.ts";
-import { RequestMethod } from "../../services/types.ts";
+import React, { useEffect, useRef, useState } from 'react'
+import { Calendar, BarChart, Circle, Plus, Minus } from 'react-feather'
+import MDEditor from '@uiw/react-md-editor'
+import './index.css'
+import EditTask from '../editTask/index.tsx'
+import { useServicesAPI } from '../../services/services-hook.ts'
+import { RequestMethod } from '../../services/types.ts'
 
 interface ToDoTaskProps {
-  task: any;
-  updateTask: (task: any) => void;
-  deleteTask: (id: number) => void;
-  allTags: tagsProps[];
-  editTags: (task: any) => void;
+  task: any
+  updateTask: (task: any) => void
+  deleteTask: (id: number) => void
+  allTags: tagsProps[]
+  editTags: (task: any) => void
 }
 
 interface tagsProps {
-  id: number;
-  name: string;
-  background: string | null;
-  createdAt: string;
+  id: number
+  name: string
+  background: string | null
+  createdAt: string
 }
 
 const ToDoTask: React.FC<ToDoTaskProps> = ({
@@ -26,156 +26,158 @@ const ToDoTask: React.FC<ToDoTaskProps> = ({
   updateTask,
   deleteTask,
   allTags,
-  editTags,
+  editTags
 }) => {
-  const descriptionRef = useRef<HTMLDivElement>(null);
-  const tagsContainerRef = useRef<HTMLDivElement>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isTagsExpanded, setIsTagsExpanded] = useState(false);
-  const [newtags, setTags] = useState<tagsProps[]>(task.tags);
-  const [titleNew, setTitle] = useState(task.title);
-  const [descriptionNew, setDescription] = useState(task.description);
-  const [dueAtNew, setDueAt] = useState(task.dueAt);
-  const [doneNew, setDone] = useState(task.done);
-  const [priorityNew, setPriority] = useState(task.priority);
+  const descriptionRef = useRef<HTMLDivElement>(null)
+  const tagsContainerRef = useRef<HTMLDivElement>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isTagsExpanded, setIsTagsExpanded] = useState(false)
+  const [newtags, setTags] = useState<tagsProps[]>(task.tags)
+  const [titleNew, setTitle] = useState(task.title)
+  const [descriptionNew, setDescription] = useState(task.description)
+  const [dueAtNew, setDueAt] = useState(task.dueAt)
+  const [doneNew, setDone] = useState(task.done)
+  const [priorityNew, setPriority] = useState(task.priority)
 
   const [UpdateTask] = useServicesAPI({
     endpoint: `task/${task.id}`,
     method: RequestMethod.PATCH,
-  });
+    testId: 'update-task'
+  })
 
   const [DeleteTask] = useServicesAPI({
     endpoint: `task/${task.id}`,
     method: RequestMethod.DELETE,
-  });
+    testId: 'delete-task'
+  })
 
-  const handleDelete = () => {
-    deleteTask(task.id);
-    DeleteTask();
-  };
+  const handleDelete = (): void => {
+    deleteTask(task.id)
+    DeleteTask()
+  }
 
-  const onDoneHandle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDone(e.target.checked);
-    UpdateTask({ body: { done: e.target.checked } });
-  };
+  const onDoneHandle = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setDone(e.target.checked)
+    UpdateTask({ body: { done: e.target.checked } })
+  }
 
   useEffect(() => {
     if (descriptionRef.current) {
       const lineHeight = parseInt(
-        getComputedStyle(descriptionRef.current).lineHeight || "0",
+        getComputedStyle(descriptionRef.current).lineHeight || '0',
         10
-      );
-      const maxHeight = lineHeight * 2;
-      const descriptionHeight = descriptionRef.current.scrollHeight;
+      )
+      const maxHeight = lineHeight * 2
+      const descriptionHeight = descriptionRef.current.scrollHeight
 
       if (descriptionHeight > maxHeight) {
-        descriptionRef.current.style.maxHeight = `${maxHeight}px`;
-        descriptionRef.current.classList.add("overflow-hidden");
+        descriptionRef.current.style.maxHeight = `${maxHeight}px`
+        descriptionRef.current.classList.add('overflow-hidden')
       }
     }
-  }, [descriptionNew]);
+  }, [descriptionNew])
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = (): void => { setIsModalOpen(true) }
+  const closeModal = (): void => { setIsModalOpen(false) }
 
-  const expandTags = () => {
-    setIsTagsExpanded(!isTagsExpanded);
-  };
+  const expandTags = (): void => {
+    setIsTagsExpanded(!isTagsExpanded)
+  }
 
   const calculateTagsFit = (
     tagsContainerRef: React.RefObject<HTMLDivElement>,
     tagWidth: number
   ): number => {
     if (tagsContainerRef.current) {
-      const containerWidth = tagsContainerRef.current.offsetWidth;
-      const availableWidth = containerWidth - 16;
+      const containerWidth = tagsContainerRef.current.offsetWidth
+      const availableWidth = containerWidth - 16
 
-      return Math.floor(availableWidth / tagWidth);
+      return Math.floor(availableWidth / tagWidth)
     }
 
-    return 0;
-  };
+    return 0
+  }
 
-  const [tagsToShow, setTagsToShow] = useState(7);
+  const [tagsToShow, setTagsToShow] = useState(7)
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = (): void => {
       if (tagsContainerRef.current) {
-        const tagWidth = 100;
-        const tagsFit = calculateTagsFit(tagsContainerRef, tagWidth);
+        const tagWidth = 100
+        const tagsFit = calculateTagsFit(tagsContainerRef, tagWidth)
 
-        setTagsToShow(tagsFit);
+        setTagsToShow(tagsFit)
       }
-    };
+    }
 
-    handleResize();
+    handleResize()
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [tagsContainerRef]);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [tagsContainerRef])
 
-  const getCurrentDateTime = (date: any) => {
-    const currentDate = new Date(date);
-    const year = currentDate.getFullYear();
-    const month = String(currentDate.getMonth() + 1).padStart(2, "0");
-    const day = String(currentDate.getDate()).padStart(2, "0");
+  const getCurrentDateTime = (date: string): string => {
+    const currentDate = new Date(date)
+    const year = currentDate.getFullYear()
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0')
+    const day = String(currentDate.getDate()).padStart(2, '0')
 
-    return `${year}-${month}-${day}`;
-  };
+    return `${year}-${month}-${day}`
+  }
 
   const adjustColorContrast = (color: string): string => {
     const hexToRgb = (hex: string): number[] => {
-      const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-      hex = hex.replace(shorthandRegex, (r, g, b) => r + r + g + g + b + b);
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
+      hex = hex.replace(shorthandRegex, (r, g, b) => r + r + g + g + b + b)
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
       return result
         ? [
             parseInt(result[1], 16),
             parseInt(result[2], 16),
-            parseInt(result[3], 16),
+            parseInt(result[3], 16)
           ]
-        : [0, 0, 0];
-    };
+        : [0, 0, 0]
+    }
 
     const calculateBrightness = (rgb: number[]): number => {
-      return (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
-    };
+      return (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000
+    }
 
-    const rgb = hexToRgb(color);
+    const rgb = hexToRgb(color)
     if (!rgb) {
-      throw new Error("Invalid color format");
+      throw new Error('Invalid color format')
     }
 
-    const brightness = calculateBrightness(rgb);
+    const brightness = calculateBrightness(rgb)
     const textColor =
-      brightness > 128 ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)";
-    return textColor;
-  };
+      brightness > 128 ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)'
+    return textColor
+  }
 
-  const handleDivClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const targetElement = e.target as HTMLElement;
+  const handleDivClick = (e: React.MouseEvent<HTMLDivElement>): void => {
+    const targetElement = e.target as HTMLElement
     if (
-      targetElement.classList.contains("w-full") ||
-      targetElement.classList.contains("justify-between")
+      targetElement.classList.contains('w-full') ||
+      targetElement.classList.contains('justify-between')
     ) {
-      openModal();
+      openModal()
     }
-  };
+  }
 
-  const updateTaskParent = (task: any, tags: tagsProps[]) => {
+  const updateTaskParent = (task: any, tags: tagsProps[]): void => {
     if (tags) {
-      setTags(tags);
+      setTags(tags)
     }
 
-    setTitle(task.title);
-    setDescription(task.description);
-    setDueAt(task.dueAt);
-    setDone(task.done);
-    setPriority(task.priority);
-  };
+    setTitle(task.title)
+    setDescription(task.description)
+    setDueAt(task.dueAt)
+    setDone(task.done)
+    setPriority(task.priority)
+  }
 
   useEffect(() => {
     updateTask({
@@ -185,9 +187,9 @@ const ToDoTask: React.FC<ToDoTaskProps> = ({
       done: doneNew,
       dueAt: dueAtNew,
       priority: priorityNew,
-      tags: newtags,
-    });
-  }, [titleNew, descriptionNew, doneNew, dueAtNew, priorityNew, newtags]);
+      tags: newtags
+    })
+  }, [titleNew, descriptionNew, doneNew, dueAtNew, priorityNew, newtags])
 
   return (
     <div
@@ -201,8 +203,8 @@ const ToDoTask: React.FC<ToDoTaskProps> = ({
             defaultChecked={doneNew}
             className="w-6 h-6 mr-2 bg-transparent border-2 border-gray-500 rounded-md appearance-none checked:bg-gray-500 checked:border-transparent focus:outline-none"
             onChange={(e) => {
-              task.done = e.target.checked;
-              onDoneHandle(e);
+              task.done = e.target.checked
+              onDoneHandle(e)
             }}
           />
           <h1 className="text-[#F7F7F7]">{titleNew}</h1>
@@ -241,9 +243,9 @@ const ToDoTask: React.FC<ToDoTaskProps> = ({
                 .map((tag, index) => (
                   <div
                     key={index}
-                    className={`flex items-center px-2 py-1 mr-2 rounded-lg opacity-50 mb-1`}
+                    className={'flex items-center px-2 py-1 mr-2 rounded-lg opacity-50 mb-1'}
                     style={{
-                      background: tag.background ? tag.background : "#083633",
+                      background: tag.background ? tag.background : '#083633'
                     }}
                   >
                     <span
@@ -297,7 +299,7 @@ const ToDoTask: React.FC<ToDoTaskProps> = ({
         editTags={editTags}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ToDoTask;
+export default ToDoTask
