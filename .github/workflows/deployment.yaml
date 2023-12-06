@@ -3,9 +3,8 @@ name: Deploy streamline-web to GCS bucket
 on:
   push:
     branches:
-      - '*'
-      - '*/*'
-      - '**' 
+      - 'main'
+      - 'staging'
 
 jobs:
   deploy-to-gcs:
