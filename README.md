@@ -49,10 +49,24 @@ The core functionality includes :
 
 ## :toolbox: Tools Used
 
-🖌️ UI Design - Figma
+🖌️ UI Design 
+
+### Figma
 The use of figma allows us as a team to simultaneously collaborate when building the design for our to do list application. Figma allowed us as a team to create intital designs and modify eachothers ideas to build a UI that everyone in the team agrees on. This includes various color schemes, logos, icons and overall layout.
 ![image](https://github.com/streamline-team/streamline-web/assets/92785142/26f5ab6c-b161-4578-bbb6-19b915aac248)
 
+ 🖥️ Development
+ 
+ ### Version Control
+ - Git: Code repository used for tracking and merging changes made in the code
+
+ ### Frameworks and Libraries
+ - React: JS Library used for user interaction development
+ - Drizzle ORM: Used for Object Relational Mapping which allows the frontend and backend to be connected
+ - TypeScript: Javascript addition of static typing language
+
+### User Authentication
+- Kinde: Powerful  thrid party authentication tool that allows user authentication to be managed seamlessly
 
 Drizzle ORM, Jest, Docker (mysql test instance), CI Github Actions automatically triggers tests
 Mocks (authentication mocking)
@@ -77,14 +91,6 @@ Selenium: For End-to-End Testing
 
 Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
-
-Framework/Libraries
-React: JavaScript library for building user interaction.  
-Drizzle: Tool for simplifying the integration of blockchain functionality.
-TypeScript: Javascript addition of static typing language. 
-
-Authentification
-Kinde: Powerfull third party authenification tool that manages our users authentication seamlessly.
 
 Linters
 
