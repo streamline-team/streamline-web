@@ -30,6 +30,7 @@ We have fused functionality with a sophisticated user interface to create a smoo
 
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
 
+
 ## :trophy: Team Description/Members
 
 - **Bruno Silva - Back End Development (25% contribution):**
@@ -50,6 +51,7 @@ We have fused functionality with a sophisticated user interface to create a smoo
 - **Deividas Dapkus - Front End Development (25% contribution):**
   - In charge of designing and implementing the visual components and client-side functionalities UI interface.
   - Contributes 25% effort to crafting an intuitive and responsive front-end experience.
+
 
 ## :toolbox: Tools Used
 
@@ -136,6 +138,7 @@ Front End Packages and versions:
         "react-router-dom": "^6.20.1",
         "use-local-storage-state": "^19.1.0"
 
+
 ## 📖 How To Run The Application
 
 1. Clone the repository
@@ -156,7 +159,6 @@ For the backend to work you will need to clone the backend repository and follow
 2. Run `npm install` to install all dependencies
 3. Run `npm run watch` to start the application
 4. docker-compose up -d to start the database
-
 
 
 ## 💼 Project Workflow
@@ -224,6 +226,7 @@ Knowledge Transfer and Documentation: Enabled team members to share ideas, solut
 
 Maintaining Workflow: In spite of individual technical difficulties, teamwork techniques like partnered programming made sure there were few hiccups.
 
+
 ## ☑️ Test Methodologies and Tools
 
 Methodology
@@ -244,6 +247,7 @@ Testing Strategies
 
 Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
+
 
 ## 💻 Coding Practices
 
@@ -284,34 +288,46 @@ Throughout this project we had to keep security in mind. For this various action
 - Dependency Scanning for known vulnerabilities and update them accordingly
 - Authentication and Authorisation through the use of the Kinde tool is in place to safeguard user data and the applications functionality
 
+
 ## CI Pipeline
 
-Continuous Integration (CI):
+Continuous Integration (CI): 🧰 GitHub Actions
 
-Tools: GitHub Actions
+GitHub actions is used to automate the testing pipline whenever code is pushed. This means the team is able to create workflows that build and test every pull request in the repository. GitHub actions also allows for various code quality controls to be put into place by running linters, unit, integrtion ad smoke tests. It also means deployment can be automated based on triggers defined during setup.
 
-Process Overview: 
-Automated Testing: Trigger some automated tests. 
-Code Quality Checks: Run linters, unit tests, and integration tests and smoke tests.
-Deployment Automation: Deploy the application based on defined triggers (successful tests, specific branches).
+Having defined workflows, version control integration and approval processes means there is standardisation in the CI Pipeline. The Pipeline can be broken into 3 components, the testnig stage, quality checks and deployment stage. Within the testing stage comprehensivve testing is executed on virtual environments. Quality checks ensure the code adheres to standards, security checks and dependecy vulnerabilities. Finally in the deployment stage automated deployment can occur to staging/production environments based on predefined conditions included the passing of tests and which branch the code is on.
 
-Pipeline Components:
-Testing Stage: Execute comprehensive test suites (unit, integration, end-to-end) on virtual environments.
-Quality Checks: Ensure adherence to coding standards, security checks, and dependency vulnerabilities.
-Deployment Stage: Automate deployment to staging/production environments based on predefined conditions (Passing tests, Specific branch).
-
-CI Pipeline Standardisation:
-
-Defined Workflow: Establish a standardised workflow from code changes to deployment.
-Version Control Integration: Link CI pipelines to specific branches for some cases of automated testing and deployment based on version control triggers.
-Approval Processes: Implement approval mechanisms through git reviews when individuals pushed code for certain final deployment stages, ensuring manual confirmation before production deployment.
+![Screenshot 2023-12-06 at 12 01 16](https://github.com/streamline-team/streamline-web/assets/92785142/d964ca45-a041-4705-bed3-b49a8abdaa61)
 
 
 ## ❗ Standards
 
+- IEEE 730 - Standard from the Institute of Electrical and Electronics Engineers that provides guidance on software quality management practices. For this project followed it when producing and collecting evidence to justify confidence in the quality of our software.
 - ESLint - Open Source tool that finds and fixes issues in the code. Works alongside the CI Pipeline. It finds and automatically fixes syntax errors and is highly customisable making it a powerful tool to keep  code consistent and maintainable.
 
 ![Screenshot 2023-12-06 at 14 42 26](https://github.com/streamline-team/streamline-web/assets/92785142/240fa26c-f3e6-471a-ab1e-d169261850b8)
 
 
 ## 🏃 Performance and Accessibility Audit
+
+When considering performance and accessibility we decided to use Google Lighthouse to generate a report that highlights the quality of our application. Lighthouse is an open-source tool thatis accessible through the development console in Google Chrome. The Lighthouse tool generated a report which contains a summary of the performance and accessibility of our application. Within the the report there are 4 metrics:
+
+- Performance - Aggregation of how the page progressed, for example the loading speeds, time taken for loading frames and meaningful content
+- Accessibility - Aggregation of how accessible the website is through captions, button names etc.
+- Best Practices - Aggregation of practices that are seen as 'best'
+- SEO - Aggregation of scores in features like the presence of titles and legible font sizes
+
+
+The website has a performance rating of 92 which suggests there is some room for improvement but overall is in 'good shape' from a performance perspective. The main issue with highlighted wth performance is is a slow response on the largest contentful paint. This refers to how quickly the main content of the page is loaded. This is due the storing of tokens in the browsers storage for authentication. So although it has a slightly slow loading of the main content, it allows for some extra security and overall improvement to the way the user can interact with the application.
+
+The accessibility rating of 82 shows that there is extra work required to make the applictaion more accessible. The comments in the accessibility review show that colours and fonts require changes. Mainly the contrast in background and foreground colours. Currently the application follows a basic colour scheme. Given the limited time for this project we were unable to include features like a light/dark mode switch and changes in text sizes. However given more time we would add these features in the next release to ensure tht the application is accessible to all. 
+
+![Screenshot 2023-12-06 at 17 00 16](https://github.com/streamline-team/streamline-web/assets/92785142/1ac950ba-58be-4190-9b95-bb8a448c5461)
+
+![Screenshot 2023-12-06 at 17 00 47](https://github.com/streamline-team/streamline-web/assets/92785142/23d58259-471d-4fe6-ba75-136fc3af6580)
+
+
+
+
+
+
