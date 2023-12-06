@@ -229,24 +229,39 @@ Maintaining Workflow: In spite of individual technical difficulties, teamwork te
 
 ## ☑️ Test Methodologies and Tools
 
-Methodology
-TDD, Test Driven Development
+## Testing Approach
+### TDD, Test-Driven Development
 
-Our streamline project relies on the software requirements converted to test cases before software is fully developed. Software development is tracked by repeatedly testing the software against all test cases for each section of functionality for both Front-End and Backend. 
+Our streamline project relies on the software requirements converted to test cases before software is fully developed. Software development is tracked by repeatedly testing the software against all test cases for each section of functionality for both Front-End and Backend. Selecting Test-Driven Development (TDD) is an ideal match for our project's objectives and schedule. The "test first" approach of TDD guarantees a stable codebase through ongoing functional validation. TDD's iterative cycle of creating tests before code helps us save time in our small 14-day project by enabling faster fixes, lowering total debugging time, and finding errors early. In our fast-paced development process, this approach increases code maintainability, modular design, and code reliability. Because of its methodical approach, TDD reduces the possibility of faults and delivers a more consistent and predictable result, which perfectly satisfies our deadline-driven demands for quality and efficiency.
 
-Testing Tools
-Jest: JavaScript testing framework for unit, integration, mock, smoke and integration testing.
-React testing library: Testing React components and their interactions.
-Selenium: For End-to-End Testing
+## Testing Tools Used
+# Front-End Testing: 
+- Vitest and Selenium
 
-Testing Strategies
+These tools were carefully selected due to their capabilities in automating and stinulating user interactions, ensuring the functionality and usability of the web application across different browsers and environemts. Vitest offers quick snapshot testing, while selenium's versatility aids in end- to end testing, validating the user interface and experience with Streamline. 
+
+# Back-End Testing:
+- Jest, Mocking and Own utilities
+
+These test server-side functionalities, API endpoints and business logic. Jest provides a robust testing framework, while mocking and incorporating our own custom utilities assit in building controlled tesingenvironments and isolating specific elements for thorough and efficient testing of the back-end system.
+
+
+## Testing Strategies
 1. Unit Testing: Write comprehensive unit tests for individual functions and components to validate their behavior in the BackEnd and Front-end.
 2. Integration Testing: Perform tests that verify the interaction between different elements and components to ensure the operate concurrently.
 3. End-to-End Testing: Implement end-to-end tests to validate the entire flow of the application, mimicking real user scenarios for reliability.
-4. Test Automation: Automate repetitive test cases reduce code duplication and improve overall manual testing execution. 
+4. Test Automation: Automate repetitive test cases reduce code duplication and improve overall manual testing execution. We have ensured all automated tests strategically run before deployemnt therefore pausing all code runs if tests are not achieved. 
+5. Mock testings: creates simulated versions of external systems like our databases or APIs. This allows testing specific features without relying on the complete backend or external services, ensuring reliable functionality and efficient testing in different scenarios despite limited resources or dependencies.
+6. Smoke testing: a smoke test is a basic, preliminary test that checks if the most critical functionalities of an application are working such as our task tagging and priority tagging features. It aims to verify that the application can perform essential tasks without encountering major issues.
 
-Test Code Coverage
+## Testing Structure
+
+## Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
+The Streamlines entire application achieves ... % code coverage. 
+
+...% code coverage demonstrates that a significant portion of the codebase has been tested, confriming the applications stability. This minimises the likelihood of undiscovered bugs and ensures a more robust and trustworthy user experience.
+
 
 
 ## 💻 Coding Practices
