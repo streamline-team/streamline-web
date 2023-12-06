@@ -34,9 +34,6 @@ jobs:
     - name: Run Jest tests
       run: npm run test
 
-    - name: Vite build
-      run: npm run build
-    
     - name: Create .env file
       run: |
         echo "VITE_KINDE_CLIENT_ID=${{ vars.VITE_KINDE_CLIENT_ID }}" >> .env
@@ -44,6 +41,9 @@ jobs:
         echo "VITE_KINDE_LOGOUT_URI=${{ vars.VITE_KINDE_LOGOUT_URI }}" >> .env
         echo "VITE_KINDE_REDIRECT_URI=${{ vars.VITE_KINDE_REDIRECT_URI }}" >> .env
         echo "VITE_STREAMLINE_SERVICES_URL=${{ vars.VITE_STREAMLINE_SERVICES_URL }}" >> .env
+
+    - name: Vite build
+      run: npm run build
 
     - uses: 'google-github-actions/auth@v2'
       with:
