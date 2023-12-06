@@ -33,7 +33,18 @@ In a world overwhelmed with online tools riddled with advertisements and lacking
 
 We have fused functionality with a sophisticated user interface to create a smooth experience.
 
-### Screenshots (Add images from the google doc)
+### Screenshots 
+![image](https://github.com/streamline-team/streamline-web/assets/119602685/a60aa9e6-f314-4a02-8982-4ac7a893bb56)
+
+
+
+![image](https://github.com/streamline-team/streamline-web/assets/119602685/c88a3154-4f56-47d3-bb7f-8a83454d5293)
+
+
+
+![image](https://github.com/streamline-team/streamline-web/assets/119602685/de515451-3b69-47ee-b24a-28b9d44dbd70)
+
+
 
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
 
