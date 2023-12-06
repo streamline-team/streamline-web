@@ -76,6 +76,12 @@ The use of figma allows us as a team to simultaneously collaborate when building
 ### User Authentication
 - Kinde: Powerful  thrid party authentication tool that allows user authentication to be managed seamlessly
 
+### A/B Testing of Initial Designs
+
+When determining which design to se we completed some A/B testing with a small group of potential users. A/B testing is a way of comparing the original and modified design of the page. To complete this a [survey](https://docs.google.com/forms/d/e/1FAIpQLSdo-n_iW0iU2F9WOtguNcdoCoo2RHV4GrtEv7FK5GllVd65aA/viewform?usp=sf_link) was given to a group of potential users. They reviewed the 2 designs, voted for their favourite and gave comments. Using this feedback we were able to modify the design before deciding on our final UI design.
+![image](https://github.com/streamline-team/streamline-web/assets/92785142/24abad49-1579-4a2b-a4f2-de2a53681cdb)
+
+
 Drizzle ORM, Jest, Docker (mysql test instance), CI Github Actions automatically triggers tests
 Mocks (authentication mocking)
 
