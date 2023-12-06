@@ -40,14 +40,14 @@ The core functionality includes :
 
 *Include UI snapshots showing the above*
 
-# Team Description
+## :trophy: Team Description
 
 - Bruno Silva - Back End Development, % contribution
 - Rebeca Williams - Back End Testing, % contribution
 - Safiya Behanzin - Front End Testing, % contribution
 - Deividas Dapkus  - Front End Development, % contribution
 
-# Tools Used
+## :toolbox: Tools Used
 Version Control
 - Git: Version control suystem for tracking changes in the codebase.
 - GitHub: Hosting the repository and managing codebase collaboration.
@@ -100,7 +100,7 @@ Front End Packages and versions:
         "react-router-dom": "^6.20.1",
         "use-local-storage-state": "^19.1.0"
 
-# How To Run The Application
+## 📖 How To Run The Application
 
 1. Clone the repository
 2. create a .env file in the root directory and add the following variables
@@ -123,7 +123,7 @@ For the backend to work you will need to clone the backend repository and follow
 
 
 
-# Project Workflow
+## 💼 Project Workflow
 
 Code Commits for Collaboration:
 
@@ -140,7 +140,7 @@ Effect on Workforce Efficiency:
 
 Maintaining Workflow: In spite of individual technical difficulties, teamwork techniques like partnered programming made sure there were few hiccups.
 
-# Test Methodologies and Tools
+## ☑️ Test Methodologies and Tools
 
 Methodology
 TDD, Test Driven Development
@@ -161,7 +161,7 @@ Testing Strategies
 Test Code Coverage
 Jest Coverage: To measure and report code coverage during testing.
 
-# Coding Practices
+## 💻 Coding Practices
 
 Coding standards
 1. Consistency: Follow a consistent coding style for naming conventions across the codebase to ensure readability and maintainability.
@@ -177,7 +177,7 @@ Security
 2. Dependency Scanning: Regularly scan dependencies for known vulnerabilities and update them accordingly.
 3. Authentication and Authorisation: Ensure robust authentication through Kinde tool is in place to safeguard user data and application functionality.
 
-# CI Pipeline
+## CI Pipeline
 
 Continuous Integration (CI):
 
@@ -200,8 +200,6 @@ Version Control Integration: Link CI pipelines to specific branches for some cas
 Approval Processes: Implement approval mechanisms through git reviews when individuals pushed code for certain final deployment stages, ensuring manual confirmation before production deployment.
 
 
-# Standards
+## ❗ Standards
 
-# Performance and Accessibility Audit
-
-
+## 🏃 Performance and Accessibility Audit
