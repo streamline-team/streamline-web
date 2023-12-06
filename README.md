@@ -1,5 +1,28 @@
-# streamline-web
-Streamline frontend built with &lt;3 on React + Vite
+# Why Streamline?
+
+## Streamline: Empowering Your To-Do List Experience
+
+In a world overwhelmed with online tools riddled with advertisements and lacking essential features, **Streamline** steps in to simplify and elevate the way you manage your tasks. Crafted with precision and care powered by React + Vite, **Streamline** is more than just a to-do list application - it's your dedicated productivity companion designed to simplify your daily tasks.
+
+## The Vision
+
+**Streamline** is our tribute to efficiency and simplicity. We are redefining task management by offering a seamless and intuitive platform that places control back in your hands as the user.
+
+## Key Features
+
+- **Effortless Task Creation**: Add tasks to your to-do list seamlessly, empowering you to organize your day effortlessly.
+- **Flexible Task Updates**: Edit and update your tasks on the go. Tailor your to-do list to match your evolving priorities.
+- **Clear Task Visualisation**: Easily view and manage your tasks, keeping your to-do list neat and comprehensible at all times.
+- **Swift Task Deletion**: Remove completed or redundant tasks swiftly, decluttering your list and keeping your focus sharp.
+- **Smart Task Tagging**: Categorise tasks with tags for better organisation and quick identification.
+
+## Your Streamlined Experience
+
+We have fused functionality with a sophisticated user interface to create a smooth experience.
+
+### Screenshots
+
+**Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
 
 # Project Description
 
@@ -180,3 +203,5 @@ Approval Processes: Implement approval mechanisms through git reviews when indiv
 # Standards
 
 # Performance and Accessibility Audit
+
+
