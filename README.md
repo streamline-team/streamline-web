@@ -36,14 +36,9 @@ We have fused functionality with a sophisticated user interface to create a smoo
 ### Screenshots 
 ![image](https://github.com/streamline-team/streamline-web/assets/119602685/a60aa9e6-f314-4a02-8982-4ac7a893bb56)
 
+![Streamline2](https://github.com/streamline-team/streamline-web/assets/92785142/e36a2e94-8391-4117-bf2f-f29f0adf9828)
 
-
-![image](https://github.com/streamline-team/streamline-web/assets/119602685/c88a3154-4f56-47d3-bb7f-8a83454d5293)
-
-
-
-![image](https://github.com/streamline-team/streamline-web/assets/119602685/de515451-3b69-47ee-b24a-28b9d44dbd70)
-
+![Streamline3](https://github.com/streamline-team/streamline-web/assets/92785142/cc04aea2-09f5-4012-a99e-cc83c5716ede)
 
 
 **Streamline** isn't just about managing tasks; it's about reclaiming control of your time. Embrace a tool built to simplify your day-to-day, allowing you to focus on what truly matters.
